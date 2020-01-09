@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 
 
-import BabylonTemplate from "./babylon/BabylonTemplate"
-import { onSceneMounting } from "./babylon/BabylonScene"
+import BabylonTemplate from "../lib/babylon/BabylonTemplate"
+import { onSceneMounting } from "../lib/babylon/BabylonScene"
 
 
 function App() {

@@ -1,7 +1,6 @@
 import { Engine, Scene, EngineOptions } from '@babylonjs/core';
 import * as React from 'react';
 
-import { onSceneMounting } from "./BabylonScene"
 
 
 /* @flow */
@@ -15,7 +14,7 @@ export type SceneEventArgs = {
 export type SceneProps = {
   engineOptions?: EngineOptions,
   adaptToDeviceRatio?: boolean,
-  onSceneMount?: (args: SceneEventArgs) => void,
+  // onSceneMount?: (args: SceneEventArgs) => void,
   width?: number,
   height?: number
 };
@@ -37,7 +36,7 @@ const styles = {
  
 }
 
-export default class BabylonTemplate<Props, State = void> extends React.Component {
+export default class BabylonTemplate extends React.Component {
 
   /* @flow */
    scene: Scene;
@@ -90,7 +89,7 @@ export default class BabylonTemplate<Props, State = void> extends React.Componen
   render () {
     // 'rest' can contain additional properties that you can flow through to canvas:
     // (id, className, etc.)
-    let { width, height, ...rest } = this.props;
+    let { width, height } = this.props;
 
     let opts: any = {};
 
